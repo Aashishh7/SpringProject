@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Contact List </title>
+        <title>RTO Vehicle Information </title>
         <s:url var="url_css" value="/static/css/style.css"/>
         <link href="${url_css}" rel="stylesheet" type="text/css"/>
     </head>
@@ -27,7 +27,7 @@
             <tr>
                 <td height="350px" valign="top" width="100%">
            
-                    <h3>Contact List</h3>
+                    <h3>Vehicle Owner Details</h3>
                     <c:if test="${param.act eq 'sv'}">
                         <p class="success">Contact Saved Successfully</p>
                     </c:if>
@@ -57,7 +57,7 @@
                                 <th>PHONE</th>
                                 <th>EMAIL</th>
                                 <th>ADDRESS</th>
-                                <th>REMARK</th>
+                                <th>REGISTRATION NUMBER & OTHER DETAILS</th>
                                 <th>ACTION</th>
                             </tr>
 

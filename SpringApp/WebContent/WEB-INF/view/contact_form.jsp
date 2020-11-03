@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title> Application </title>
+        <title> Form </title>
         <s:url var="url_css" value="/static/css/style.css"/>
         <link href="${url_css}" rel="stylesheet" type="text/css"/>
     </head>
@@ -28,7 +28,7 @@
             <tr>
                 <td height="350px" valign="top">
                
-                    <h3>Contact Form</h3>
+                    <h3>Vehicle Owner Details(Form)</h3>
                     <c:if test="${err!=null}">
                         <p class="error">${err}</p>
                     </c:if>                  
@@ -52,7 +52,8 @@
                                 <td><f:textarea path="address" /> </td>
                             </tr>
                             <tr>
-                                <td>Remark</td>
+                                <td>Registration 
+                               &  Other Details</td>
                                 <td><f:textarea path="remark" /> </td>
                             </tr>
                             <tr>                                
