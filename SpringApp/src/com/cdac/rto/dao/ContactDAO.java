@@ -12,9 +12,9 @@ public interface ContactDAO {
 
     public void delete(Details c);
 
-    public void delete(Integer VehicleId);
+    public void delete(Integer vehicleId);
 
-    public Details findById(Integer VehicleId);
+    public Details findById(Integer vehicleId);
 
     public List<Details> findAll();
 

@@ -10,7 +10,7 @@ public class ContactRowMapper implements RowMapper<Details>{
     @Override
     public Details mapRow(ResultSet rs, int i) throws SQLException {
     	Details c=new Details();
-        c.setVehicleId(rs.getInt("VehicleId"));
+        c.setVehicleId(rs.getInt("vehicleId"));
         c.setUserId(rs.getInt("userId"));
         c.setName(rs.getString("name"));
         c.setEmail(rs.getString("email"));

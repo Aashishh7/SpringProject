@@ -10,11 +10,11 @@ public interface ContactService {
 
     public void update(Details c);
 
-    public void delete(Integer VehicleId);
+    public void delete(Integer vehicleId);
    
-    public void delete(Integer[] VehicleIds);
+    public void delete(Integer[] vehicleIds);
     
-    public Details findById(Integer VehicleId);
+    public Details findById(Integer vehicleId);
 
     
     public List<Details> findUserDetails(Integer userId);

@@ -36,13 +36,13 @@
             </tr>
             <tr>
                 <td height="25px">
-                    <%-- Menu --%>
+                 
                     <jsp:include page="include/menu.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="350px" valign="top">
-                    <%-- Page Content Area--%>
+                    
                     <h3>User Registration</h3>
                     <c:if test="${err!=null}">
                         <p class="error">${err}</p>
@@ -88,7 +88,7 @@
             </tr>
             <tr>
                 <td height="25px">
-                    <%-- Footer --%>
+                  
                     <jsp:include page="include/footer.jsp"/>
                 </td>
             </tr>

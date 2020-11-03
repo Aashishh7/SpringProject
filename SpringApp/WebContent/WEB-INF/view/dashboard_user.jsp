@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>User Dashboard - Contact Application </title>
+        <title>User Dashboard </title>
          <s:url var="url_css" value="/static/css/style.css"/>
         <link href="${url_css}" rel="stylesheet" type="text/css"/>
     </head>
@@ -13,26 +13,26 @@
         <table border="1" width="80%" align="center">
             <tr>
                 <td height="80px">
-                    <%-- Header --%>
+              
                     <jsp:include page="include/header.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="25px">
-                     <%-- Menu --%>
+   
                      <jsp:include page="include/menu.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="350px" valign="top">
-                     <%-- Page Content Area--%>
+                   
                      <h1>User Dashboard</h1>
-                      TODO : User Options in this page
+                
                 </td>
             </tr>
              <tr>
                 <td height="25px">
-                     <%-- Footer --%>
+                
                      <jsp:include page="include/footer.jsp"/>
                 </td>
             </tr>

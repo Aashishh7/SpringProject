@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@ComponentScan(basePackages = {"com.cdac.dao","com.cdac.service"})
+@ComponentScan(basePackages = {"com.cdac.rto.dao","com.cdac.rto.service"})
 public class SpringRootConfig {    
  
     @Bean

@@ -33,9 +33,9 @@ public class ContactDAOImpl extends BaseDAO implements ContactDAO {
 
     @Override
     public void update(Details c) {
-        String sql = "UPDATE details SET name=:name, phone=:phone, email=:email, address=:address, remark=:remark WHERE VehicleId=:VehicleId";
+        String sql = "UPDATE details SET name=:name, phone=:phone, email=:email, address=:address, remark=:remark WHERE vehicleId=:vehicleId";
         Map m = new HashMap();
-        m.put("VehicleId", c.getVehicleId());
+        m.put("vehicleId", c.getVehicleId());
         m.put("name", c.getName());
         m.put("phone", c.getPhone());
         m.put("email", c.getEmail());
@@ -50,26 +50,26 @@ public class ContactDAOImpl extends BaseDAO implements ContactDAO {
     }
 
     @Override
-    public void delete(Integer VehicleId) {
-        String sql = "DELETE FROM  Details WHERE VehicleId=?";
-        getJdbcTemplate().update(sql, VehicleId);
+    public void delete(Integer vehicleId) {
+        String sql = "DELETE FROM  details WHERE vehicleId=?";
+        getJdbcTemplate().update(sql, vehicleId);
     }
 
     @Override
-    public Details findById(Integer VehicleId) {
-        String sql = "SELECT VehicleId, userId, name, phone, email, address, remark FROM Details WHERE VehicleId=?";
-        return getJdbcTemplate().queryForObject(sql, new ContactRowMapper(), VehicleId);
+    public Details findById(Integer vehicleId) {
+        String sql = "SELECT vehicleId, userId, name, phone, email, address, remark FROM details WHERE vehicleId=?";
+        return getJdbcTemplate().queryForObject(sql, new ContactRowMapper(), vehicleId);
     }
 
     @Override
     public List<Details> findAll() {
-        String sql = "SELECT VehicleId, userId, name, phone, email, address, remark FROM Details";
+        String sql = "SELECT vehicleId, userId, name, phone, email, address, remark FROM details";
         return getJdbcTemplate().query(sql, new ContactRowMapper());
     }
 
     @Override
     public List<Details> findByProperty(String propName, Object propValue) {
-        String sql = "SELECT VehicleId, userId, name, phone, email, address, remark FROM  Details WHERE "+propName+"=?";
+        String sql = "SELECT vehicleId, userId, name, phone, email, address, remark FROM  details WHERE "+propName+"=?";
         return getJdbcTemplate().query(sql, new ContactRowMapper(), propValue);
     }
 

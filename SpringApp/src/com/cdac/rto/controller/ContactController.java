@@ -25,17 +25,17 @@ public class ContactController {
     }
 
     @RequestMapping(value = "/user/edit_contact")
-    public String prepareEditForm(Model m, HttpSession session, @RequestParam("cid") Integer VehicleId) {
-        session.setAttribute("aVehicleId", VehicleId);
-        Details c = contactService.findById(VehicleId);
+    public String prepareEditForm(Model m, HttpSession session, @RequestParam("cid") Integer vehicleId) {
+        session.setAttribute("aVehicleId", vehicleId);
+        Details c = contactService.findById(vehicleId);
         m.addAttribute("command", c);
         return "contact_form";//JSP form view
     }
 
     @RequestMapping(value = "/user/save_contact")
     public String saveOrUpdateContact(@ModelAttribute("command") Details c, Model m, HttpSession session) {
-        Integer VehicleId = (Integer) session.getAttribute("aVehicleId");
-        if (VehicleId == null) {
+        Integer vehicleId = (Integer) session.getAttribute("aVehicleId");
+        if (vehicleId == null) {
     
             try {
                 Integer userId = (Integer) session.getAttribute("userId");
@@ -50,7 +50,7 @@ public class ContactController {
         } else {
             //update task
             try {
-                c.setVehicleId(VehicleId); //PK
+                c.setVehicleId(vehicleId); //PK
                 contactService.update(c);
                 session.removeAttribute("aVehicleId");
                 return "redirect:clist?act=ed";//redirect user to contact list url
@@ -77,14 +77,14 @@ public class ContactController {
     }
 
     @RequestMapping(value = "/user/del_contact")
-    public String deleteContact(@RequestParam("cid") Integer VehicleId) {
-        contactService.delete(VehicleId);
+    public String deleteContact(@RequestParam("cid") Integer vehicleId) {
+        contactService.delete(vehicleId);
         return "redirect:clist?act=del";
     }
 
     @RequestMapping(value = "/user/bulk_cdelete")
-    public String deleteBulkContact(@RequestParam("cid") Integer[] VehicleIds) {
-        contactService.delete(VehicleIds);
+    public String deleteBulkContact(@RequestParam("cid") Integer[] vehicleIds) {
+        contactService.delete(vehicleIds);
         return "redirect:clist?act=del";
     }
 }

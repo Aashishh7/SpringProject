@@ -12,7 +12,7 @@
         <script src="${url_jqlib}"></script>
         <script>
             function changeStatus(uid, lstatus){
-                //alert(userId+", "+loginStatus);
+         
                 $.ajax({
                     url:'change_status',
                     data:{userId:uid, loginStatus:lstatus} ,
@@ -28,19 +28,19 @@
         <table border="1" width="80%" align="center">
             <tr>
                 <td height="80px">
-                    <%-- Header --%>
+                 
                     <jsp:include page="include/header.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="25px">
-                    <%-- Menu --%>
+                
                     <jsp:include page="include/menu.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="350px" valign="top">
-                    <%-- Page Content Area--%>
+                   
                     <h3>User List</h3>
                     <table border="1">
                         <tr>
@@ -70,7 +70,7 @@
                                     <script>
                                            $('#id_${u.userId}').val(${u.loginStatus});
                                     </script>
-                                    <%-- ${u.loginStatus} --%>
+                             
                                 </td>
                             </tr>
                         </c:forEach>
@@ -79,8 +79,8 @@
                 </td>
             </tr>
             <tr>
-                <td height="25px">
-                    <%-- Footer --%>
+                <td height="55px">
+            
                     <jsp:include page="include/footer.jsp"/>
                 </td>
             </tr>

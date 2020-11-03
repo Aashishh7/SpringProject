@@ -14,19 +14,19 @@
         <table border="1" width="80%" align="center">
             <tr>
                 <td height="80px">
-                    <%-- Header --%>
+               
                     <jsp:include page="include/header.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="25px">
-                    <%-- Menu --%>
+
                     <jsp:include page="include/menu.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="350px" valign="top" width="100%">
-                    <%-- Page Content Area--%>
+           
                     <h3>Contact List</h3>
                     <c:if test="${param.act eq 'sv'}">
                         <p class="success">Contact Saved Successfully</p>
@@ -69,18 +69,18 @@
 
                             <c:forEach var="c" items="${contactList}" varStatus="st">
                                 <tr>
-                                    <td align="center"><input type="checkbox" name="cid" value="${c.VehicleId}"/></td>
-                                    <td>${c.Vehicleid}</td>
+                                    <td align="center"><input type="checkbox" name="cid" value="${c.vehicleId}"/></td>
+                                    <td>${c.vehicleId}</td>
                                     <td>${c.name}</td>
                                     <td>${c.phone}</td>
                                     <td>${c.email}</td>
                                     <td>${c.address}</td>
                                     <td>${c.remark}</td>    
                                     <s:url var="url_del" value="/user/del_contact">
-                                        <s:param name="cid" value="${c.VehicleId}"/>
+                                        <s:param name="cid" value="${c.vehicleId}"/>
                                     </s:url>   
                                     <s:url var="url_edit" value="/user/edit_contact">
-                                        <s:param name="cid" value="${c.VehicleId}"/>
+                                        <s:param name="cid" value="${c.vehicleId}"/>
                                     </s:url> 
                                     <td><a href="${url_edit}">Edit</a> | <a href="${url_del}">Delete</a></td>
                                 </tr> 
@@ -91,7 +91,7 @@
             </tr>
             <tr>
                 <td height="25px">
-                    <%-- Footer --%>
+             
                     <jsp:include page="include/footer.jsp"/>
                 </td>
             </tr>

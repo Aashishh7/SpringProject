@@ -1,7 +1,7 @@
 package com.cdac.rto.domain;
 
 public class Details {
-    private Integer VehicleId; //PK
+    private Integer vehicleId; //PK
     private Integer userId;//FK
     private String name;
     private String phone;
@@ -13,11 +13,11 @@ public class Details {
     }
 
     public Integer getVehicleId() {
-        return VehicleId;
+        return vehicleId;
     }
 
-    public void setVehicleId(Integer VehicleId) {
-        this.VehicleId= VehicleId;
+    public void setVehicleId(Integer vehicleId) {
+        this.vehicleId= vehicleId;
     }
 
     public Integer getUserId() {

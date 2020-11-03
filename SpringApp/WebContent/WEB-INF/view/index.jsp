@@ -13,22 +13,22 @@
     </head>
     <s:url var="url_bg" value="/static/images/bg.jpg"/>
     <body background="${url_bg}">
-        <table border="1" width="80%" align="center">
+        <table border="1" width="100%" align="center">
             <tr>
                 <td height="80px">
-                    <%-- Header --%>
+                
                     <jsp:include page="include/header.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="25px">
-                    <%-- Menu --%>
+                    
                     <jsp:include page="include/menu.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="350px" valign="top">
-                    <%-- Page Content Area--%>
+                 
                     <h3>User Login</h3>
                     <c:if test="${err!=null}">
                         <p class="error">${err}</p>
@@ -37,7 +37,7 @@
                         <p class="success">Logout Successfully! </p>
                     </c:if>
                     <c:if test="${param.act eq 'reg'}">
-                        <p class="success">User Registered Successfully. Please login</p>
+                        <p class="success">User Registered Successfully. </p>
                     </c:if>  
                     <s:url var="url_login"  value="/login"/>
                     <f:form action="${url_login}" modelAttribute="command">
@@ -62,7 +62,7 @@
             </tr>
             <tr>
                 <td height="25px">
-                    <%-- Footer --%>
+                    
                     <jsp:include page="include/footer.jsp"/>
                 </td>
             </tr>

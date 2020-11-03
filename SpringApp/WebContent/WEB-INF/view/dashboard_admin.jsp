@@ -13,26 +13,26 @@
         <table border="1" width="80%" align="center">
             <tr>
                 <td height="80px">
-                    <%-- Header --%>
+                  
                     <jsp:include page="include/header.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="25px">
-                     <%-- Menu --%>
+            
                      <jsp:include page="include/menu.jsp"/>
                 </td>
             </tr>
             <tr>
                 <td height="350px" valign="top">
-                     <%-- Page Content Area--%>
+                 
                      <h1>Admin Dashboard</h1>
-                      TODO : Admin Options in this page
+                   
                 </td>
             </tr>
              <tr>
                 <td height="25px">
-                     <%-- Footer --%>
+                     
                      <jsp:include page="include/footer.jsp"/>
                 </td>
             </tr>
