@@ -41,7 +41,7 @@
                             <td align="right" >
                                 <form action="<s:url value="/user/contact_search"/>">
                                     <input type="text" name="freeText" value="${param.freeText}" placeholder="Enter Text To Search">
-                                    <button>Find</button>
+                                    <button>Search</button>
                                 </form>
                             </td>                           
                         </tr>

@@ -9,11 +9,11 @@
     <s:url var="url_index" value="/index"/>
     <a href="${url_index}">Home</a> | <a href="${url_index}">Login</a> | <a href="${url_reg_form}">Register</a> | <a href="#">About</a> | <a href="#">Help</a>   
 </c:if>
-<c:if test="${sessionScope.userId!=null && sessionScope.role == 1}">
-   
-    <a href="#">Home</a> | <a href="<s:url value="/admin/users"/>">User List</a> | <a href="${url_logout}">Logout</a>  
-</c:if>
 <c:if test="${sessionScope.userId!=null && sessionScope.role == 2}">
+   
+    <a href="#">Home</a>   | <a href="${url_logout}">Logout</a>  
+</c:if>
+<c:if test="${sessionScope.userId!=null && sessionScope.role == 1}">
 
     <s:url var="url_uhome" value="/user/dashboard"/>
     <s:url var="url_cform" value="/user/contact_form"/>
