@@ -29,10 +29,10 @@
            
                     <h3>Vehicle Owner Details</h3>
                     <c:if test="${param.act eq 'sv'}">
-                        <p class="success">Contact Saved Successfully</p>
+                        <p class="success">Details Added Successfully</p>
                     </c:if>
                     <c:if test="${param.act eq 'del'}">
-                        <p class="success">Contact Deleted Successfully</p>
+                        <p class="success">Details Deleted Successfully</p>
                     </c:if>
 
 
@@ -40,7 +40,7 @@
                         <tr>
                             <td align="right" >
                                 <form action="<s:url value="/user/contact_search"/>">
-                                    <input type="text" name="freeText" value="${param.freeText}" placeholder="Enter Text To Search">
+                                    <input type="text" name="freeText" value="${param.freeText}" placeholder="Enter to Search !">
                                     <button>Search</button>
                                 </form>
                             </td>                           
@@ -52,12 +52,12 @@
                         <table border="1" cellpadding="3"  width="100%">
                             <tr>
                                 <th>SELECT</th>
-                                <th>CID</th>
+                                <th>VID</th>
                                 <th>NAME</th>
                                 <th>PHONE</th>
                                 <th>EMAIL</th>
-                                <th>ADDRESS</th>
-                                <th>REGISTRATION NUMBER & OTHER DETAILS</th>
+                                <th>VEHICLE NAME</th>
+                                <th>REGISTRATION NUMBER </th>
                                 <th>ACTION</th>
                             </tr>
 

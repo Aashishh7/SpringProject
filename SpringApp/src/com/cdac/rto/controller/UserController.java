@@ -26,7 +26,7 @@ public class UserController {
     @RequestMapping(value = {"/", "/index"})
     public String index(Model m) {
         m.addAttribute("command", new LoginCommand());
-        return "index"; //JSP - /WEB-INF/view/index.jsp
+        return "index";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -34,31 +34,30 @@ public class UserController {
         try {
             User loggedInUser = userService.login(cmd.getLoginName(), cmd.getPassword());
             if (loggedInUser == null) {
-                //FAILED
-                //add error message and go back to login-form
+          
                 m.addAttribute("err", "Login Failed! Enter valid credentials.");
-                return "index";//JSP - Login FORM
-            } else //SUCCESS
-            //check the role and redirect to a appropriate dashboard 
+                return "index";
+            } else 
+          
             {
                 if (loggedInUser.getRole().equals(UserService.ROLE_ADMIN)) {
-                    //add user detail in session (assign session to logged in user)
+                   
                     addUserInSession(loggedInUser, session);
                     return "redirect:admin/dashboard";
                 } else if (loggedInUser.getRole().equals(UserService.ROLE_USER)) {
-                    //add user detail in session (assign session to logged in user)
+        
                     addUserInSession(loggedInUser, session);
                     return "redirect:user/dashboard";
                 } else {
-                    //add error message and go back to login-form
+                   
                     m.addAttribute("err", "Invalid User ROLE");
-                    return "index";//JSP - Login FORM
+                    return "index";
                 }
             }
         } catch (UserBlockedException ex) {
-            //add error message and go back to login-form
+
             m.addAttribute("err", ex.getMessage());
-            return "index";//JSP - Login FORM
+            return "index";
         }
     }
 
@@ -88,7 +87,7 @@ public class UserController {
     public String registrationForm(Model m) {
         UserCommand cmd = new UserCommand();
         m.addAttribute("command", cmd);
-        return "reg_form";//JSP
+        return "reg_form";
     }
 
     @RequestMapping(value = "/register")

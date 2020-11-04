@@ -27,16 +27,7 @@
                 <td height="350px" valign="top">
                    
                      <h1>User Dashboard</h1>
-                  <table width="100%">
-                        <tr>
-                            <td align="center" >
-                                <form action="<s:url value="/user/contact_search"/>">
-                                    <input type="text" name="freeText" value="${param.freeText}" placeholder="Enter Registration No.">
-                                    <button>Search</button>
-                                </form>
-                            </td>                           
-                        </tr>
-                    </table>
+                  
                 </td>
             </tr>
             

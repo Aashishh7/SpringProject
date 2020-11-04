@@ -36,7 +36,7 @@
                     <f:form action="${url_csave}" modelAttribute="command">
                         <table border="1">
                             <tr>
-                                <td>Name</td>
+                                <td>Vehicle Name</td>
                                 <td><f:input path="name" /> </td>
                             </tr>
                             <tr>

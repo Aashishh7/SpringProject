@@ -56,11 +56,13 @@
                                     <a href="<s:url value="/reg_form"/>">New User Registration</a>
                                 </td>
                             </tr>
+                           
                         </table>
                     </f:form>
                 </td>
             </tr>
             <tr>
+             
                 <td height="25px">
                     
                     <jsp:include page="include/footer.jsp"/>
